@@ -16,7 +16,7 @@ import {
   VerifiedUser
 } from "@mui/icons-material";
 
-const SUPER_ADMIN_EMAIL = import.meta.env.VITE_SUPER_ADMIN_EMAIL || "ujjwalchauhan671@gmail.com";
+const SUPER_ADMIN_EMAIL = import.meta.env.VITE_SUPER_ADMIN_EMAIL || "admin@example.com";
 
 const AdminDashboard = () => {
   const { user } = useAuth();

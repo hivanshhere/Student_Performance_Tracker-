@@ -226,9 +226,7 @@ the frontend and FastAPI serves requests routed through `/api`.
 
 ## 👤 Author
 
-**Ujjwal Pratap Singh**
-*   **GitHub:** [@ujjwal9034](https://github.com/ujjwal9034)
-*   **Project Repository:** [Student-Performance-Tracker](https://github.com/ujjwal9034/Student-Performance-Tracker)
+**Vansh Mittal**
 
 ---
 

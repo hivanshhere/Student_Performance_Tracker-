@@ -17,9 +17,9 @@ models.Base.metadata.create_all(bind=database.engine)
 try:
     import auth
     db_session = next(database.get_db())
-    EMAIL = os.getenv("SUPER_ADMIN_EMAIL", "ujjwalchauhan671@gmail.com")
+    EMAIL = os.getenv("SUPER_ADMIN_EMAIL", "admin@example.com")
     PASSWORD = os.getenv("SUPER_ADMIN_PASSWORD", "admin123")
-    NAME = os.getenv("SUPER_ADMIN_NAME", "Ujjwal Chauhan")
+    NAME = os.getenv("SUPER_ADMIN_NAME", "Vansh Mittal")
     existing_admin = db_session.query(models.User).filter(models.User.email == EMAIL).first()
     if not existing_admin:
         admin_user = models.User(

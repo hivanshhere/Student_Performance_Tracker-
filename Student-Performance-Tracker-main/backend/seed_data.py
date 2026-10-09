@@ -41,7 +41,7 @@ def seed_database():
     db.query(models.Student).delete()
     db.query(models.Teacher).delete()
     # Delete all users EXCEPT the Super Admin we seeded earlier
-    super_admin_email = os.getenv("SUPER_ADMIN_EMAIL", "ujjwalchauhan671@gmail.com")
+    super_admin_email = os.getenv("SUPER_ADMIN_EMAIL", "admin@example.com")
     db.query(models.User).filter(models.User.email != super_admin_email).delete()
     db.commit()
 

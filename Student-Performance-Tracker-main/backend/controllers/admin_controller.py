@@ -8,7 +8,7 @@ import auth
 from email_service import send_student_registration_email, send_teacher_registration_email
 
 # ── Super Admin (cannot be removed or demoted by anyone else) ────
-SUPER_ADMIN_EMAIL = os.getenv("SUPER_ADMIN_EMAIL", "ujjwalchauhan671@gmail.com")
+SUPER_ADMIN_EMAIL = os.getenv("SUPER_ADMIN_EMAIL", "admin@example.com")
 
 def _assert_super_admin(requester_id: int, db: Session):
     """Raise 403 if the requester is not the super admin."""

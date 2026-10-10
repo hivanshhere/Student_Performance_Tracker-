@@ -36,16 +36,6 @@ const Navbar = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Language support
-  const [lang, setLang] = useState(() => localStorage.getItem("lang") || "en");
-
-  const handleLangToggle = () => {
-    const newLang = lang === "en" ? "hi" : "en";
-    setLang(newLang);
-    localStorage.setItem("lang", newLang);
-    window.dispatchEvent(new Event("languageChange"));
-  };
-
   // Profile fields state
   const [profileData, setProfileData] = useState(null);
   const [profileLoading, setProfileLoading] = useState(false);
@@ -228,15 +218,6 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 )}
-              </button>
-
-              {/* Language Toggle */}
-              <button
-                onClick={handleLangToggle}
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-xs font-bold text-slate-300 hover:bg-white/10 hover:text-indigo-300 transition-all cursor-pointer"
-                title="Switch Language / भाषा बदलें"
-              >
-                {lang === "en" ? "EN" : "हिं"}
               </button>
 
               {!user ? (
